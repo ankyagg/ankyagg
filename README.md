@@ -9,7 +9,7 @@
 <div align="center">
 
 <a href="https://github.com/ankyagg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=4000&pause=2000&color=A78BFA&center=true&vCenter=true&width=700&lines=→+Engineering+systems+that+solve+real+problems;→+Computer+Vision+%7C+Cloud+%7C+Full-Stack;→+Student+%40+TSEC%2C+Mumbai;→+Always+curious.+Always+building." alt="Typing SVG"/>
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=16&duration=4000&pause=2000&color=A78BFA&center=true&vCenter=true&width=700&lines=%E2%86%92+Engineering+systems+that+solve+real+problems;%E2%86%92+Computer+Vision+%7C+Cloud+%7C+Full-Stack;%E2%86%92+Student+%40+TSEC%2C+Mumbai;%E2%86%92+Always+curious.+Always+building." alt="Typing SVG"/>
 </a>
 
 <br/><br/>
@@ -111,42 +111,6 @@ class Aniket:
 
 </div>
 
-<details>
-<summary><code>🔧 Set up the contribution snake</code></summary>
-<br/>
-
-Create `.github/workflows/snake.yml` in your `ankyagg/ankyagg` profile repo:
-
-```yaml
-name: Generate Snake
-
-on:
-  schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v3
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      - uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
-
-</details>
 
 ---
 
