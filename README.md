@@ -100,22 +100,25 @@ class Aniket:
 
 ---
 
-## 🧱 3D Contribution City
+## 🐍 Contribution Grid
 
 <div align="center">
 
-<img alt="3D Contribution Graph" src="https://raw.githubusercontent.com/ankyagg/ankyagg/main/profile-3d-contrib/profile-night-view.svg" width="95%"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ankyagg/ankyagg/output/github-contribution-grid-snake-dark.svg"/>
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/ankyagg/ankyagg/output/github-contribution-grid-snake-dark.svg" width="95%"/>
+</picture>
 
 </div>
 
 <details>
-<summary><code>🔧 Set up the 3D city</code></summary>
+<summary><code>🔧 Set up the contribution snake</code></summary>
 <br/>
 
-Create `.github/workflows/3d-contrib.yml` in your `ankyagg/ankyagg` profile repo:
+Create `.github/workflows/snake.yml` in your `ankyagg/ankyagg` profile repo:
 
 ```yaml
-name: Generate 3D Contribution Graph
+name: Generate Snake
 
 on:
   schedule:
@@ -123,22 +126,24 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
-    name: generate-github-profile-3d-contrib
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-      - name: Commit & Push
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add -A .
-          git commit -m "generated 3D contribution graph"
-          git push
 ```
 
 </details>
@@ -149,10 +154,10 @@ jobs:
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d0d0d)](https://linkedin.com/in/aniket-walanj)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d0d0d)](https://www.linkedin.com/in/aniketwalanj/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d0d0d)](https://github.com/ankyagg)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d0d0d)](mailto:your.email@gmail.com)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=0d0d0d)](https://instagram.com/)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d0d0d)](mailto:ixaaniketwalanj@gmail.com)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=0d0d0d)](https://instagram.com/aniketonlii78)
 
 </div>
 
@@ -165,4 +170,3 @@ jobs:
 <sub><i>"First, solve the problem. Then, write the code."</i> — John Johnson</sub>
 
 </div>
-#
