@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="new.png" width="100%" alt="Aniket Walanj — Software Engineer"/>
+<img src="name.png" width="100%" alt="Aniket Walanj — Software Engineer"/>
 
 </div>
 
